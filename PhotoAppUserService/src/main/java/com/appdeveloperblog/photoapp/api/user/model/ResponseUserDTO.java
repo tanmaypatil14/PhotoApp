@@ -5,7 +5,6 @@ public class ResponseUserDTO {
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String password;
 
 	private String userId;
 	private String encryptedPassword;
@@ -34,14 +33,6 @@ public class ResponseUserDTO {
 		this.email = email;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getUserId() {
 		return userId;
 	}
@@ -58,13 +49,11 @@ public class ResponseUserDTO {
 		this.encryptedPassword = encryptedPassword;
 	}
 
-	public ResponseUserDTO(String firstName, String lastName, String email, String password, String userId,
-			String encryptedPassword) {
+	public ResponseUserDTO(String firstName, String lastName, String email, String userId, String encryptedPassword) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.password = password;
 		this.userId = userId;
 		this.encryptedPassword = encryptedPassword;
 	}
@@ -76,8 +65,8 @@ public class ResponseUserDTO {
 
 	@Override
 	public String toString() {
-		return "ResponseUserDTO [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password="
-				+ password + ", userId=" + userId + ", encryptedPassword=" + encryptedPassword + "]";
+		return "ResponseUserDTO [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", userId="
+				+ userId + ", encryptedPassword=" + encryptedPassword + "]";
 	}
 
 }

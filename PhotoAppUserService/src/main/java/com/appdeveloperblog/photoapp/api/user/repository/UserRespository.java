@@ -7,5 +7,7 @@ import com.appdeveloperblog.photoapp.api.user.entity.UserEntity;
 
 @Repository
 public interface UserRespository extends JpaRepository<UserEntity, Long> {
+	
+	public UserEntity findByEmail(String email);
 
 }

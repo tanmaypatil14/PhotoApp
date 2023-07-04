@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class UserEntity implements Serializable {
 
 	/**
@@ -27,9 +27,9 @@ public class UserEntity implements Serializable {
 	private String lastName;
 	@Column(nullable = false, length = 150, unique = true)
 	private String email;
-	@Column(nullable = false, length = 50)
+	@Column(nullable = false, unique = true)
 	private String userId;
-	@Column(nullable = false, length = 50)
+	@Column(nullable = false, unique = true)
 	private String encryptedPassword;
 
 	public long getId() {
